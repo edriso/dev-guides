@@ -40,7 +40,7 @@
       header { text-align: center; margin-bottom: clamp(40px, 7vw, 64px); }
       .eyebrow {
         font-family: var(--ui); font-size: 12.5px; font-weight: 700;
-        letter-spacing: 0.18em; text-transform: uppercase; color: var(--faint); margin-bottom: 18px;
+        letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 18px;
       }
       h1 {
         font-family: var(--serif); font-weight: 500; font-size: clamp(32px, 6.5vw, 52px);
@@ -70,19 +70,18 @@
       a.card.big { padding: 24px; gap: 10px; }
       a.card:hover {
         transform: translateY(-3px);
-        border-color: color-mix(in oklab, var(--c, #8a93d8) 55%, var(--line));
+        border-color: color-mix(in oklab, var(--c, var(--accent)) 55%, var(--line));
         background: var(--surface2);
       }
-      a.card:focus-visible { outline: 2px solid var(--c, #8a93d8); outline-offset: 3px; }
+      a.card:focus-visible { outline: 2px solid var(--c, var(--accent)); outline-offset: 3px; }
       .ct { display: flex; align-items: center; gap: 11px; }
       .dot {
         width: 30px; height: 30px; border-radius: 9px; flex-shrink: 0; display: grid;
-        place-items: center; font-size: 16px; background: color-mix(in oklab, var(--c, #8a93d8) 20%, transparent);
+        place-items: center; font-size: 16px; background: color-mix(in oklab, var(--c, var(--accent)) 20%, transparent);
       }
       a.card.big .dot { width: 40px; height: 40px; border-radius: 12px; font-size: 21px; }
       .name { font-family: var(--serif); font-weight: 600; font-size: 18px; color: var(--ink); letter-spacing: -0.01em; }
       a.card.big .name { font-size: 21px; }
-      .meta { margin-left: auto; font-size: 12px; color: var(--faint); font-weight: 600; }
       .chip {
         margin-left: auto; font-size: 10.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
         color: var(--faint); border: 1px solid var(--line); border-radius: 999px; padding: 3px 9px;
@@ -94,6 +93,7 @@
       footer a:hover { color: var(--ink); }
       @media (prefers-reduced-motion: reduce) { a.card { transition: none; } }
     </style>
+    <style>:root { --accent: #e0a24e; }</style>
   </head>
   <body>
     <div class="wrap">
@@ -176,10 +176,6 @@
         <a class="card" style="--c:#5cc8d8" href="https://edriso.github.io/react-course-notes/" target="_blank" rel="noopener">
           <div class="ct"><span class="dot" style="color:#5cc8d8">⚛️</span><span class="name">React Course Notes</span></div>
           <div class="desc">Clear, practical notes on React concepts, with copy-ready code and a cheat sheet on every page.</div>
-        </a>
-        <a class="card" style="--c:#c98a5c" href="https://edriso.github.io/write.md/" target="_blank" rel="noopener">
-          <div class="ct"><span class="dot" style="color:#c98a5c">✍️</span><span class="name">write.md</span></div>
-          <div class="desc">Learn Markdown and technical writing with interactive examples and a live preview editor.</div>
         </a>
         <a class="card" style="--c:#5fbf9b" href="https://edriso.github.io/sudo-school/" target="_blank" rel="noopener">
           <div class="ct"><span class="dot" style="color:#5fbf9b">🐧</span><span class="name">Sudo School</span></div>
